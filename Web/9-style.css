@@ -1,0 +1,10 @@
+/* External CSS */
+body{
+    background-color:purple;
+}
+h2{
+    text-align: center;
+}
+h2,li{
+    color:maroon;
+}

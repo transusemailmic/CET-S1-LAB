@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>About CSS</title>
+        <style>
+            /* Internal CSS */
+            #one{
+                background-color:gold;
+            }
+            img.cssimg{
+                width: 1265px;
+                height:250px;
+            }
+            .prop{
+                background-color:gold;
+                width:700px;
+                overflow-y:scroll;
+                height:150px;
+            }
+        </style>
+        <link rel="stylesheet" href="9-style.css">
+    </head>
+    <body>
+        <div id="one">
+            <h1 style="text-align:center;color:red;">Welcome to the world of CSS</h1> <!-- Inline CSS-->
+        </div>
+        <div>
+            <img class="cssimg" src="css.png">
+            <div class="prop">
+                <h2>Properties of CSS</h2>
+                <ul>
+                    <li>It is used to control the layout and appearance of HTML elements on a web page, separating content from design.</li>
+                    <li>By linking an external CSS file to multiple HTML documents, you can apply consistent styling across an entire website.</li>
+                    <li>There are three types of CSS-inline,internal and external</li>
+                    <li>When multiple rules apply to the same element, CSS decides which rule takes priority based on specificity, importance (!important), and order.</li>
+                    <li>With features like media queries, flexible layouts (e.g., Flexbox, Grid), and customizable styles, CSS helps websites work well on all devices and be more user-friendly.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
