@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h2 id="t1">Click to change the colour of this Text</h2>
+        <button id="red" onclick="cc('red')">Red</button>
+        <button id="green" onclick="cc('green')">Green</button>
+        <button id="blue" onclick="cc('blue')">Blue</button>
+        <script>
+            let txt1=document.getElementById("t1");
+            function cc(c){
+                txt1.style.color=c;
+            }
+        </script>
+    </body>
+</html>

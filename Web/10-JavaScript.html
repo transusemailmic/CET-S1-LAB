@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <p>Enter Two numbers</p>
+        Enter Number 1: <input type="text" id="n1">
+        Enter Number 2: <input type="text" id="n2">
+        <button onclick="calc()">Calculate Sum</button>
+        <p id="s1">The sum is currently not calculated yet</p>
+        <script>
+            document.write("This is a sample Javascript program");
+            function calc(){
+                let m1=parseInt(document.getElementById("n1").value);
+                let m2=parseInt(document.getElementById("n2").value);
+                let m3=m1+m2;
+                let js1=document.getElementById("s1");
+                js1.innerText="The Sum is "+m3;
+                alert("The sum is "+m3);
+            }
+        </script>
+    </body>
+</html>
