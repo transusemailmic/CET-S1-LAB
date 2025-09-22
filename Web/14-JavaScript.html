@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>String Functions in JavaScript</title>
+    </head>
+    <body>
+        <h1>Using Functions in JavaScript</h1>
+        Enter String <input type="text" id="s1"><br>
+        Enter Substring <input type="text" id="s2"><br>
+        <input type="submit" value="Length" onclick="length()">
+        <input type="submit" value="Upper Case" onclick="upper()">
+        <input type="submit" value="Lower Case" onclick="lower()">
+        <input type="submit" value="Index of" onclick="indexof()">
+        <input type="submit" value="Search" onclick="search()">
+        <input type="submit" value="Concat" onclick="concat()">
+        <p>Output: </p>
+        <p id="p1"></p>
+        Enter Number <input type="text" id="n1"><br>
+        <input type="submit" value="Round" onclick="round()">
+        <input type="submit" value="Ceil" onclick="ceil()">
+        <input type="submit" value="Floor" onclick="floor()">
+        <input type="submit" value="Trunc" onclick="trunc()">
+        <input type="submit" value="Sign" onclick="sign()">
+        <input type="submit" value="Power" onclick="power()">
+        <input type="submit" value="Sqrt" onclick="sqrt()">
+        <input type="submit" value="Abs" onclick="abs()">
+        <p>Output: </p>
+        <p id="p2"></p>
+        <script>
+            function length(){
+                let s1=document.getElementById("s1").value;
+                document.getElementById("p1").innerHTML=s1.length;
+            }
+            function upper(){
+                let s1=document.getElementById("s1").value;
+                document.getElementById("p1").innerHTML=s1.toUpperCase();
+            }
+            function lower(){
+                let s1=document.getElementById("s1").value;
+                document.getElementById("p1").innerHTML=s1.toLowerCase();
+            }
+            function indexof(){
+                let s1=document.getElementById("s1").value;
+                let s2=document.getElementById("s2").value;
+                document.getElementById("p1").innerHTML=s1.indexOf(s2);
+            }
+            function search(){
+                let s1=document.getElementById("s1").value;
+                let s2=document.getElementById("s2").value;
+                document.getElementById("p1").innerHTML=s1.search(s2);
+            }
+            function concat(){
+                let s1=document.getElementById("s1").value;
+                let s2=document.getElementById("s2").value;
+                document.getElementById("p1").innerHTML=s1.concat(s2);
+            }
+            function round(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.round(n1);
+            }
+            function ceil(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.ceil(n1);
+            }
+            function floor(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.floor(n1);
+            }
+            function trunc(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.trunc(n1);
+            }
+            function sign(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.sign(n1);
+            }
+            function power(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                let n2=parseFloat(prompt("Enter the power"));
+                document.getElementById("p2").innerHTML=Math.pow(n1,n2);
+            }
+            function sqrt(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.sqrt(n1);
+            }
+            function abs(){
+                let n1=parseFloat(document.getElementById("n1").value);
+                document.getElementById("p2").innerHTML=Math.abs(n1);
+            }
+        </script>
+    </body>
+</html>
