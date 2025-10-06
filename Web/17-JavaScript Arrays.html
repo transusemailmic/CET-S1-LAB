@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p id="lok"></p>
+        <script>
+            var cars=['BMW','Audi','Benz','Rolls Royce','Ferrari'];
+            document.write(cars[2]);
+            const cars2=new Array('BMW','Audi','Benz','Rolls Royce','Ferrari');
+            document.write(cars2[2]+"<br>");
+            document.write(cars2.length);
+            document.write("<br>");
+            var d1="<ul>";
+            for(var i=0;i<cars2.length-1;i++){
+                d1+="<li>"+cars2[i]+"</li>";
+            }
+            d1+="</ul>";
+            document.getElementById("lok").innerHTML=d1;
+        </script>
+    </body>
+</html>

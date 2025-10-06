@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Event Listener BG Color Change</title>
+    </head>
+    <body>
+        <input type="submit" value="button" id="but1">
+        <script>
+            function changeColor(){
+                const letters='0123456789ABCDEF';
+                clr='#';
+                for(var i=0;i<6;i++){
+                    clr+=letters[Math.floor(Math.random()*16)];
+                }
+                document.body.style.backgroundColor=clr;
+            }
+            document.getElementById("but1").addEventListener("click",changeColor);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Event Handling Change Image and Text</title>
+    </head>
+    <body>
+        <h2>Emirates of UAE</h2>
+        <input id="but1" type="submit" value="Click to Learn about Each Emirate">
+        <h2 id="chead"></h2>
+        <img id="cimg" src="" width="400px" style="display:none">
+        <p id="cpara"></p>
+        <script>
+            document.getElementById("but1").addEventListener("click",contChanger);
+            var chead=document.getElementById("chead");
+            var cimg=document.getElementById("cimg");
+            var cpara=document.getElementById("cpara");
+            var i=0;
+            var cheadArr=["Dubai","Abu Dhabi","Sharjah","Ajman","Fujairah","Ras Al Khaimah","Umm Al Quwain"];
+            var cimgArr=["eh1.jpg","eh2.jpg","eh3.jpg","eh4.jpg","eh5.jpg","eh6.jpg","eh7.jpg"]
+            var cparaArr=["Dubai is a global city in the United Arab Emirates known for its futuristic architecture, luxury shopping, and vibrant nightlife. It is home to iconic landmarks like the Burj Khalifa, the world's tallest building, and artificial islands such as the Palm Jumeirah.","Abu Dhabi, the capital of the United Arab Emirates, is known for its rich cultural heritage, modern skyline, and expansive deserts. It hosts landmarks like the Sheikh Zayed Grand Mosque and the Louvre Abu Dhabi, blending tradition with innovation.","Sharjah is a cultural hub of the United Arab Emirates, known for its museums, art galleries, and dedication to preserving Emirati heritage. It has been recognized as the Cultural Capital of the Arab World by UNESCO and offers a more traditional atmosphere compared to its neighboring cities.","Ajman is the smallest emirate in the United Arab Emirates, known for its peaceful beaches, relaxed lifestyle, and growing development. It offers a blend of traditional charm and modern living, making it an increasingly popular residential and tourist destination.","Fujairah is the only emirate of the UAE located entirely on the eastern coast along the Gulf of Oman, known for its scenic mountains and clean beaches. It is a popular destination for nature lovers and divers, offering a more laid-back and natural environment compared to the larger emirates.","Ras Al Khaimah, located in the northern part of the UAE, is known for its stunning natural landscapes, including rugged mountains, desert dunes, and beautiful beaches. It’s a growing tourism destination, offering adventure activities like hiking, ziplining on Jebel Jais (the UAE’s highest peak), and cultural experiences in historic sites.","Umm Al Quwain is the least populated emirate in the UAE, known for its quiet, laid-back atmosphere and preserved natural surroundings. It offers attractions like mangrove forests, the Dreamland Aqua Park, and traditional dhow building, making it ideal for those seeking a peaceful escape."];
+            function contChanger(){
+                var j=i%7;
+                cimg.style.display="block";
+                chead.innerText=cheadArr[j];
+                cimg.src=cimgArr[j];
+                cpara.innerText=cparaArr[j];
+                i++;
+            }
+        </script>
+    </body>
+</html>
