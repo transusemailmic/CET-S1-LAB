@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            p{
+                margin:0;
+                color:red;
+                display:none;
+            }
+        </style>
+    </head>
+    <body bgcolor="skyblue">
+        <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="13"><font color="red"><h1>WELCOME TO FRESHER'S WORLD!!!</h1></font></font></marquee>
+        <form method="get" onsubmit="return validate()" name="regform">
+            <table border="1" align="center">
+                <tr>
+                    <th colspan="2">Registration Form</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="iname"><p id="pname"></p></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><select name="iage">
+                        <option>SELECT</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                    </select><p id="page"></p></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="ipassword"><p id="ppassword"></p></td>
+                </tr>
+                <tr>
+                    <td>Re-enter Password</td>
+                    <td><input type="password" name="irepassword"><p id="prepassword"></p></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Select your security question</td>
+                    <td><input type="radio" name="security">What is your pet name?</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security">Who is your best friend?</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security">What is your favorite color?</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="security">Who is your favorite teacher?</td>
+                </tr>
+                <tr>
+                    <td>Answer of securty question</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email id</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Languages Known</td>
+                    <td>
+                        <input type="checkbox" name="lang">Malayalam
+                        <input type="checkbox" name="lang">English
+                        <input type="checkbox" name="lang">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>
+                        <table border="1">
+                            <tr>
+                                <th>Home</th>
+                                <th>Office</th>
+                            </tr>
+                            <tr>
+                                <td><input type="tel"></td>
+                                <td><input type="tel"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload CV</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr align="center">
+                    <td><input type="reset"></td>
+                    <td><input type="submit" onclick="validate()"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function validate(){
+                let x1=document.forms["regform"]["iname"].value;
+                let x2=document.forms["regform"]["iage"].value;
+                let x3=document.forms["regform"]["ipassword"].value;
+                let x4=document.forms["regform"]["irepassword"].value;
+                let flval=1;
+                if(x1==""){
+                    let pname=document.getElementById("pname");
+                    pname.innerHTML="Name can't be empty";
+                    pname.style.display="block";
+                    flval=0;
+                }
+                else{
+                    if(!isNaN(x1)){
+                        let pname=document.getElementById("pname");
+                        pname.innerHTML="Name can't be a number";
+                        pname.style.display="block";
+                        flval=0;
+                    }
+                }
+                if(x2=="SELECT"){
+                    let page=document.getElementById("page");
+                    page.innerHTML="Please select the age";
+                    page.style.display="block";
+                    flval=0;
+                }
+                if(x3==""){
+                    let ppassword=document.getElementById("ppassword");
+                    ppassword.innerHTML="Password can't be empty";
+                    ppassword.style.display="block";
+                    flval=0;
+                }
+                passRegx="/^.{8,}$/";
+                if(x3=="" && passRegx.test(x3)){
+                    let ppassword=document.getElementById("ppassword");
+                    ppassword.innerHTML="Password must contain 8 characters or more";
+                    ppassword.style.display="block";
+                    flval=0;
+                }
+                if(x4==""){
+                    let prepassword=document.getElementById("prepassword");
+                    prepassword.innerHTML="Password can't be empty";
+                    prepassword.style.display="block";
+                    flval=0;
+                }
+                if(x4!="" && x3!=x4){
+                    let prepassword=document.getElementById("prepassword");
+                    prepassword.innerHTML="Passwords don't match";
+                    prepassword.style.display="block";
+                    flval=0;
+                }
+                if(flval==0)
+                    return false;
+                else
+                    return true;
+            }
+        </script>
+    </body>
+</html>

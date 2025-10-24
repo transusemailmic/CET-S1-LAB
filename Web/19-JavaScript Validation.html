@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>JavaScript Validation</title>
+        <style>
+            #err{
+                color:red;
+            }
+        </style>
+    </head>
+    <body bgcolor="black" style="color:white">
+        <form method="GET" name="myform" onsubmit="return validate()">
+            Enter Some Text: <input type="text" id="abc" name="abc">
+            <br>
+            <p id="err"></p>
+            <input type="submit" value="Enter">
+        </form>
+        <script>
+            function validate(){
+                //let x = document.getElementById("abc").value;
+                let x=document.forms["myform"]["abc"].value;
+                if(x==""){
+                    document.getElementById("err").innerHTML="Name should not be empty";
+                    return false
+                }
+                return true
+            }
+        </script>
+    </body>
+</html>
