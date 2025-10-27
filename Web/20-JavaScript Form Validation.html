@@ -88,7 +88,7 @@
                 </tr>
                 <tr align="center">
                     <td><input type="reset"></td>
-                    <td><input type="submit" onclick="validate()"></td>
+                    <td><input type="submit"></td>
                 </tr>
             </table>
         </form>
@@ -125,12 +125,14 @@
                     ppassword.style.display="block";
                     flval=0;
                 }
-                passRegx="/^.{8,}$/";
-                if(x3=="" && passRegx.test(x3)){
-                    let ppassword=document.getElementById("ppassword");
-                    ppassword.innerHTML="Password must contain 8 characters or more";
-                    ppassword.style.display="block";
-                    flval=0;
+                passRegx=/^.{8,}$/;
+                if(x3!=""){
+                    if(!(passRegx.test(x3))){
+                        let ppassword=document.getElementById("ppassword");
+                        ppassword.innerHTML="Password must contain 8 characters or more";
+                        ppassword.style.display="block";
+                        flval=0;
+                    }
                 }
                 if(x4==""){
                     let prepassword=document.getElementById("prepassword");
