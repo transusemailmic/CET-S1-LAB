@@ -40,24 +40,24 @@
                 </tr>
                 <tr>
                     <td rowspan="4">Select your security question</td>
-                    <td><input type="radio" name="security">What is your pet name?</td>
+                    <td><input type="radio" name="isecurity" value="pet">What is your pet name?</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="security">Who is your best friend?</td>
+                    <td><input type="radio" name="isecurity" value="friend">Who is your best friend?</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="security">What is your favorite color?</td>
+                    <td><input type="radio" name="isecurity" value="color">What is your favorite color?</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="security">Who is your favorite teacher?</td>
+                    <td><input type="radio" name="isecurity" value="teacher">Who is your favorite teacher?<p id="psecurity"></p></td>
                 </tr>
                 <tr>
                     <td>Answer of securty question</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" name="isecurityans"><p id="psecurityans"></p></td>
                 </tr>
                 <tr>
                     <td>Email id</td>
-                    <td><input type="email"></td>
+                    <td><input type="email" name="iemail"><p id="pemail"></p></td>
                 </tr>
                 <tr>
                     <td>Languages Known</td>
@@ -76,15 +76,15 @@
                                 <th>Office</th>
                             </tr>
                             <tr>
-                                <td><input type="tel"></td>
-                                <td><input type="tel"></td>
+                                <td><input type="tel" name="iphone1"><p id="pphone1"></p></td>
+                                <td><input type="tel" name="iphone2"><p id="pphone2"></p></td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr>
                     <td>Upload CV</td>
-                    <td><input type="file"></td>
+                    <td><input type="file" name="ifile"><p id="pfile"></p></td>
                 </tr>
                 <tr align="center">
                     <td><input type="reset"></td>
@@ -98,6 +98,12 @@
                 let x2=document.forms["regform"]["iage"].value;
                 let x3=document.forms["regform"]["ipassword"].value;
                 let x4=document.forms["regform"]["irepassword"].value;
+                let x5=document.forms["regform"]["isecurity"].value;
+                let x6=document.forms["regform"]["isecurityans"].value;
+                let x7=document.forms["regform"]["iemail"].value;
+                let x8=document.forms["regform"]["iphone1"].value;
+                let x9=document.forms["regform"]["iphone2"].value;
+                let x10=document.forms["regform"]["ifile"].value;
                 let flval=1;
                 if(x1==""){
                     let pname=document.getElementById("pname");
@@ -125,11 +131,11 @@
                     ppassword.style.display="block";
                     flval=0;
                 }
-                passRegx=/^.{8,}$/;
+                passRegx=/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*]).{8,}$/;
                 if(x3!=""){
                     if(!(passRegx.test(x3))){
                         let ppassword=document.getElementById("ppassword");
-                        ppassword.innerHTML="Password must contain 8 characters or more";
+                        ppassword.innerHTML="Password must contain atleast 8 characters, a capital letter, number and special character";
                         ppassword.style.display="block";
                         flval=0;
                     }
@@ -144,6 +150,75 @@
                     let prepassword=document.getElementById("prepassword");
                     prepassword.innerHTML="Passwords don't match";
                     prepassword.style.display="block";
+                    flval=0;
+                }
+                if(x5==""){
+                    let psecurity=document.getElementById("psecurity");
+                    psecurity.innerHTML="Please select a security question";
+                    psecurity.style.display="block";
+                    flval=0;
+                }
+                if(x6==""){
+                    let psecurityans=document.getElementById("psecurityans");
+                    psecurityans.innerHTML="Security Answer can't be empty";
+                    psecurityans.style.display="block";
+                    flval=0;
+                }
+                if(x7==""){
+                    let pemail=document.getElementById("pemail");
+                    pemail.innerHTML="Email can't be empty";
+                    pemail.style.display="block";
+                    flval=0;
+                }
+                emailRegx=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if(x7!=""){
+                    if(!(emailRegx.test(x7))){
+                        let pemail=document.getElementById("pemail");
+                        pemail.innerHTML="Invalid Email";
+                        pemail.style.display="block";
+                        flval=0;
+                    }
+                }
+                if(x8==""){
+                    let pphone1=document.getElementById("pphone1");
+                    pphone1.innerHTML="Number can't be empty";
+                    pphone1.style.display="block";
+                    flval=0;
+                } 
+                else if(isNaN(x8)){
+                    let pphone1=document.getElementById("pphone1");
+                    pphone1.innerHTML="Phone Number should only include digits";
+                    pphone1.style.display="block";
+                    flval=0;
+                } 
+                else if(x8.length!=10){
+                    let pphone1=document.getElementById("pphone1");
+                    pphone1.innerHTML="Invalid Phone Number";
+                    pphone1.style.display="block";
+                    flval=0;
+                }
+                if(x9==""){
+                    let pphone2=document.getElementById("pphone2");
+                    pphone2.innerHTML="Number can't be empty";
+                    pphone2.style.display="block";
+                    flval=0;
+                } 
+                else if(isNaN(x9)){
+                    let pphone2=document.getElementById("pphone2");
+                    pphone2.innerHTML="Phone Number should only include digits";
+                    pphone2.style.display="block";
+                    flval=0;
+                } 
+                else if(x9.length!=10){
+                    let pphone2=document.getElementById("pphone2");
+                    pphone2.innerHTML="Invalid Phone Number";
+                    pphone2.style.display="block";
+                    flval=0;
+                }
+                if(x10==""){
+                    let pfile=document.getElementById("pfile");
+                    pfile.innerHTML="Please Upload CV";
+                    pfile.style.display="block";
                     flval=0;
                 }
                 if(flval==0)
