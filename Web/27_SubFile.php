@@ -11,12 +11,15 @@
         $q2="INSERT INTO studmarks VALUES($rno,'$name','$sex',$m1,$m2,$tot)";
         $r1=mysqli_query($con,$q1);
         if(mysqli_num_rows($r1)>0){
-            echo "<script>alert('Roll Number already exists!')</script>";
+            echo "<script>alert('Roll Number already exists!');window.history.back();</script>";
         }
         else{
             $r2=mysqli_query($con,$q2);
             if($r2){
-                echo "<script>alert('Roll Number already exists!')</script>";
+                echo "<script>alert('Data Inserted Successfully');window.history.back();</script>";
+            }
+            else{
+                echo "<script>alert('Data Insertion Failed!');window.history.back();</script>";
             }
         }
     }
