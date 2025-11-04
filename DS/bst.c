@@ -41,26 +41,30 @@ struct bst* delete(struct bst* root, int value){
     else{
         if(root->lchild==NULL&&root->rchild==NULL){
             free(root);
+            printf("Node Deleted Successfully!\n");
             return NULL;
         }
         else if(root->lchild==NULL){
             struct bst* temp=root->rchild;
             free(root);
+            printf("Node Deleted Successfully!\n");
             return temp;
         }
         else if(root->rchild==NULL){
             struct bst* temp=root->lchild;
             free(root);
+            printf("Node Deleted Successfully!\n");
             return temp;
         }
         else{
-            struct bst* inSucc=root;
-            struct bst* temp=root->rchild;
-            while(temp->lchild!=NULL){
-                inSucc=temp;
-                temp=temp->lchild;
+            struct bst* inSuccPar=root;
+            struct bst* inSucc=root->rchild;
+            while(inSucc->lchild!=NULL){
+                inSuccPar=inSucc;
+                inSucc=inSucc->lchild;
             }
-            root->data=inSucc;
+            root->data=inSucc->data;
+            root->rchild=delete(root->rchild,inSucc->data);
         }
     }
     return root;
