@@ -7,10 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Student Management System</title>
 </head>
-<body>
-    <h1>Student Management System</h1>
+<body style="height:auto">
+    <h1 class="login_title">Student Management System</h1>
     <div class="login_cont">
         <h2 class="login_h">Login</h2>
         <form method="POST" action="home.php" name="myForm">
