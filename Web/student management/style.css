@@ -125,6 +125,7 @@ h1,h2,h3,h4,h5,h6,p,a,input,table{
     border-collapse:separate;
     border-spacing: 10px;
     font-size: 30px;
+    width:100%;
 }
 .reg_cont form{
     display: flex;
@@ -155,4 +156,7 @@ h1,h2,h3,h4,h5,h6,p,a,input,table{
     display: flex;
     align-items:center;
     justify-content: space-around;
+}
+.del_form{
+    width:100%;
 }

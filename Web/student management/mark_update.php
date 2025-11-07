@@ -14,7 +14,7 @@
                 if($con){
                     $q1="SELECT student.*,mark.* FROM student INNER JOIN mark ON student.rno=mark.rno WHERE student.rno=$rno";
                     $r1=mysqli_query($con,$q1);
-                    if(mysqli_fetch_assoc($r1)>0){
+                    if(mysqli_num_rows($r1)>0){
                         ?>
                         <div class="reg_cont">
                             <h1 class="reg_title">Student Mark Update</h1>
@@ -25,7 +25,7 @@
                                             echo "<tr><td>Name</td><td>".$row["name"]."</td></tr>";
                                             echo "<tr><td>Roll No</td><td>".$row["rno"]."<input type='hidden' name='rno' value='".$row["rno"]."'></td></tr>";
                                             echo "<tr><td>Science</td><td><input type='text' name='science' value='".$row["science"]."'></td></tr>";
-                                            echo "<tr><td>Maths</td><td><input type='text' name='maths'value='".$row["math"]."'></td></tr>";
+                                            echo "<tr><td>Maths</td><td><input type='text' name='maths'value='".$row["maths"]."'></td></tr>";
                                             echo "<tr><td>Language</td><td><input type='text' name='language' value='".$row["language"]."'></td></tr>";
                                             echo "<tr><td>Total</td><td><input type='text' name='tot' readonly required></td></tr>";
                                             echo "<tr><td colspan='2'><input type='button' value='Calculate Total' onclick='total()'> </td></tr>";
@@ -43,12 +43,15 @@
                                     document.forms["myForm"]["tot"].value=s;
                                 }
                             </script>
-                    </div>
-                    <?php    
+                        </div>
+                        <?php    
                     }
                     else{
-                        echo "<script>alert('Database Connection Error');window.history.back();</script>";
+                        echo "<script>alert('Enter Marks First');window.history.back();</script>";
                     }
+                }
+                else{
+                    echo "<script>alert('Database Connection Error');window.history.back();</script>";
                 }
             }
         ?>

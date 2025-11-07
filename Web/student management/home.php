@@ -36,8 +36,8 @@
                                         <tr><td><a href="registration.php" target="home_frame">Student Registration</a></td></tr>
                                         <tr><td><a href="mark_entry_roll.php" target="home_frame">Mark Entry</a></td></tr>
                                         <tr><td><a href="mark_update_roll.php" target="home_frame">Mark Update</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">Delete Student</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">Update Student</a></td></tr>
+                                        <tr><td><a href="deletion_roll.php" target="home_frame">Delete Student</a></td></tr>
+                                        <tr><td><a href="updation_roll.php" target="home_frame">Update Student</a></td></tr>
                                         <tr><td><a href="index.php" target="home_frame">View Progress Card</a></td></tr>
                                         <tr><td><a href="index.php" target="home_frame">View Top Student</a></td></tr>
                                     </table>
