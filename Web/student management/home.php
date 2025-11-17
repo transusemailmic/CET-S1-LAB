@@ -38,8 +38,8 @@
                                         <tr><td><a href="mark_update_roll.php" target="home_frame">Mark Update</a></td></tr>
                                         <tr><td><a href="deletion_roll.php" target="home_frame">Delete Student</a></td></tr>
                                         <tr><td><a href="updation_roll.php" target="home_frame">Update Student</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">View Progress Card</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">View Top Student</a></td></tr>
+                                        <tr><td><a href="progress_card_roll.php" target="home_frame">View Progress Card</a></td></tr>
+                                        <tr><td><a href="top_stud.php" target="home_frame">View Top Student</a></td></tr>
                                     </table>
                                 </div>
                                 <div class="l2_2_2">

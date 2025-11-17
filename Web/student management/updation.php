@@ -22,7 +22,8 @@
                                 <?php
                                     while($row=mysqli_fetch_assoc($r1)){
                                         echo "<tr><td>Name</td><td><input type='text' name='name' value='".$row["name"]."' required></td></tr>";
-                                        echo "<tr><td>Roll No</td><td><input type='text' name='rno' value='".$row["rno"]."' required></td></tr>";
+                                        echo "<tr><td>Roll No</td><td><input type='text' name='new_rno' value='".$row["rno"]."' required></td></tr>";
+                                        echo "<input type='hidden' name='old_rno' value='".$row["rno"]."' required>";
                                         echo "<tr><td>Class</td><td><input type='text' name='class' value='".$row["class"]."' required></td></tr>";
                                         echo "<tr><td>Gender</td><td class='reg_gender'>Male <input type='radio' name='sex' value='M' ".($row["gender"]=="M"?"checked":"")." required> Female <input type='radio' name='sex' value='F' ".($row["gender"]=="F"?"checked":"")."></td></tr>";
                                         echo "<tr><td colspan='2'><input type='submit' value='Update'></td></tr>";
