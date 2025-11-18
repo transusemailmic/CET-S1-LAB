@@ -28,6 +28,7 @@
                         ?>
                         <div class="home_l1">
                             <div class="l2_1">
+                                <img src="favicon.png">
                                 <h1>Admin Dashboard</h1>
                             </div>
                             <div class="l2_2">
@@ -43,7 +44,7 @@
                                     </table>
                                 </div>
                                 <div class="l2_2_2">
-                                    <iframe name="home_frame" src=""  class="home_frame"></iframe>
+                                    <iframe name="home_frame" src="welcome.php"  class="home_frame"></iframe>
                                 </div>
                             </div>
                         </div>
