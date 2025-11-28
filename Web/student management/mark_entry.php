@@ -17,7 +17,7 @@
                     ?>
                     <div class="reg_cont">
                         <h1 class="reg_title">Student Mark Entry</h1>
-                        <form action="mark_entry_sub" method="GET" name="myForm">
+                        <form action="mark_entry_sub.php" method="GET" name="myForm">
                             <table cellspacing="0">
                                 <?php
                                     while($row=mysqli_fetch_assoc($r1)){

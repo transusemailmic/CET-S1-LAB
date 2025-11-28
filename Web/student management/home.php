@@ -28,6 +28,7 @@
                         ?>
                         <div class="home_l1">
                             <div class="l2_1">
+                                <img src="favicon.png">
                                 <h1>Admin Dashboard</h1>
                             </div>
                             <div class="l2_2">
@@ -35,15 +36,15 @@
                                     <table border="1">
                                         <tr><td><a href="registration.php" target="home_frame">Student Registration</a></td></tr>
                                         <tr><td><a href="mark_entry_roll.php" target="home_frame">Mark Entry</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">Mark Update</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">Delete Student</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">Update Student</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">View Progress Card</a></td></tr>
-                                        <tr><td><a href="index.php" target="home_frame">View Top Student</a></td></tr>
+                                        <tr><td><a href="mark_update_roll.php" target="home_frame">Mark Update</a></td></tr>
+                                        <tr><td><a href="deletion_roll.php" target="home_frame">Delete Student</a></td></tr>
+                                        <tr><td><a href="updation_roll.php" target="home_frame">Update Student</a></td></tr>
+                                        <tr><td><a href="progress_card_roll.php" target="home_frame">View Progress Card</a></td></tr>
+                                        <tr><td><a href="top_stud.php" target="home_frame">View Top Student</a></td></tr>
                                     </table>
                                 </div>
                                 <div class="l2_2_2">
-                                    <iframe name="home_frame" src=""  class="home_frame"></iframe>
+                                    <iframe name="home_frame" src="welcome.php"  class="home_frame"></iframe>
                                 </div>
                             </div>
                         </div>

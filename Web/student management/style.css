@@ -61,6 +61,14 @@ h1,h2,h3,h4,h5,h6,p,a,input,table{
     text-align: center;
     flex: 1;
     background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+.home_l1 .l2_1 img{
+    width:60px;
+    height:60px;
 }
 .home_l1 .l2_2{
     display: flex;
@@ -125,6 +133,7 @@ h1,h2,h3,h4,h5,h6,p,a,input,table{
     border-collapse:separate;
     border-spacing: 10px;
     font-size: 30px;
+    width:100%;
 }
 .reg_cont form{
     display: flex;
@@ -155,4 +164,14 @@ h1,h2,h3,h4,h5,h6,p,a,input,table{
     display: flex;
     align-items:center;
     justify-content: space-around;
+}
+.del_form{
+    width:100%;
+}
+.welcome_title{
+    font-size: 20px;
+    margin:0px;
+}
+.welcome_img{
+    width:100px;
 }
